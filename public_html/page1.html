@@ -208,9 +208,9 @@ function displayW3CSS() {
     myContainer.style.display = "none";
 } 
 
-var elements = [{"FirstName":"Somchai", "LastName":"Hankla", "Points": 60},
-{"FirstName":"Nadetch", "LastName":"Hekaru", "Points": 49},
-{"FirstName":"Yaya", "LastName":"Tokoda", "Points": 78}] ; 
+var elements = [{"FirstName":"Somchai", "LastName":"Hankla", "Points": 60 , "StudentID": 9999},
+{"FirstName":"Nadetch", "LastName":"Hekaru", "Points": 49 , "StudentID": 1111},
+{"FirstName":"Yaya", "LastName":"Tokoda", "Points": 78, "StudentID": 2222} ] ; 
 
 function displayDataToTable(){
     for (var i =0 ; i<elements.length; i++) {
@@ -222,10 +222,12 @@ function displayDataToTable(){
         let cell1 = row.insertCell(0);
         let cell2 = row.insertCell(1);
         let cell3 = row.insertCell(2);
+        let cell4 = row.insertCell(3);
 
         cell1.innerHTML = elements[i].FirstName;
         cell2.innerHTML = elements[i].LastName ;
         cell3.innerHTML = elements[i].Points;
+        cell4.innerHTML = elements[i].StudentID;
     }
  
 }
